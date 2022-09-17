@@ -1,0 +1,16 @@
+﻿@model IndexViewModel;
+@{
+    bool feature = Model.DemoFeatureEnabled;
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @if (feature)
+    {
+        <h1>Hello Feature!</h1>
+    }
+    else
+    {
+        <h1>Hello World!</h1>
+    }
+</div>
