@@ -7,7 +7,7 @@ var settings = new UnleashSettings()
 {
     AppName = "dot-net-client",
     Environment = Env.GetString("ENVIRONMENT"),
-    FetchTogglesInterval = TimeSpan.FromSeconds(1),
+    FetchTogglesInterval = TimeSpan.FromSeconds(Env.GetInt("FETCH_TOGGLES_INTERVAL")),
     UnleashApi = new Uri(Env.GetString("API_URL")),
     CustomHttpHeaders = new Dictionary<string, string>()
             {
